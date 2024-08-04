@@ -1,0 +1,122 @@
+<!--
+******************************************************************************************
+NOTICE: This HTML file is the exclusive property of CanvasIcraft. Unauthorized copying,
+distribution, modification, or any form of reuse of this file, in whole or in part, is
+strictly prohibited and may result in severe civil and criminal penalties. All rights reserved.
+
+Licensed under the CanvasIcraft Proprietary License.
+You may obtain a copy of the License by contacting CanvasIcraft.
+******************************************************************************************
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CanvaSICraft</title>
+    <meta name="author" content="CanvasIcraft, EROS|V">
+    <meta name="copyright" content="© 2024 CanvasIcraft. All rights reserved.">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.5/croppie.min.css" />
+</head>
+<body>
+
+    <div class="grid" id="image-blonPMnn"> </div>
+    <input type="file" class="item" id="image-upload" accept="image/*,video/*" multiple hidden />
+    <button id="upload-btn" class="univ-button"><i class="fa-solid fa-plus"> </i></button>
+    <button id="toggle-resize" class="univ-button"><i class="fa-regular fa-pen-to-square"></i></button>
+    <button id="toggle-video-controls" class="univ-button"><i class="fa-regular fa-circle-play"></i></button>
+    <button id="youtube-btn" class="univ-button"><i class="fa-brands fa-youtube"></i></button>
+    <button id="delete-toggle-btn" class="univ-button"><i class="fa-regular fa-trash-can"></i></button>
+    <button id="open-playlist-btn" class="univ-button"><i class="fa-solid fa-circle-play"></i></button>
+    <button id="select-folder-button" class="univ-button"> <i class="fa-regular fa-square-caret-right"></i> </button>
+    <div class="active-menu-line">
+      <button id="active-menu"></button>
+    </div>
+    <div class="active-menu-line-left">
+      <button id="active-menu-left"></button>
+    </div>
+    <div id="transparentDiv"></div>
+    <div id="transparentDiv-left"></div>
+    <button id="show-grid-button" class="univ-button"><i class="fa-solid fa-border-all"></i></button>
+    <div id="layout-xErsxT" style="display: none;">
+        <button id="layout1-button">
+            <img src="https://i.ibb.co/w4m4FZr/1-Button-PINKF.png" alt="Icon">
+        </button>
+        <button id="layout2-button">
+            <img src="https://i.ibb.co/mcK2JMp/3-Button-PINK.png" alt="Icon">
+        </button>
+        <button id="layout3-button">
+            <img src="https://i.ibb.co/rxMF46H/3icon.png" alt="Icon">
+        </button>
+        <button id="layout4-button">
+            <img src="https://i.ibb.co/WvY5FzT/4icon.png" alt="Icon">
+        </button>
+    </div>
+    <div class="parent" style="display: none;">
+        <div class="div1 linear-blonPMnn"></div>
+        <div class="div2 linear-blonPMnn"></div>
+        <div class="div3 linear-blonPMnn"></div>
+        <div class="div4 linear-blonPMnn" style="display: none;"></div>
+        <div class="div5 linear-blonPMnn" style="display: none;"></div>
+    </div>
+    <button id="blurButton" class="univ-button"><i class="fa-regular fa-eye-slash"></i></button>
+    <div id="blurOverlay"></div>
+    <button id="show-local-grid-button" class="univ-button"><i class="fa-regular fa-file-video"></i></button>
+    <div class="local-grid-xErsxT"  style="display: none;">
+        <button onclick="chooseVideos(1)">
+            <img src="https://i.ibb.co/724CGkg/1-Button-PINK.png" alt="Icon">
+        </button>
+        <button onclick="chooseVideos(2)">
+             <img src="https://i.ibb.co/kxjVvhP/2-Button-PINK.png" alt="Icon">
+        </button>
+        <button onclick="chooseVideos(3)">
+            <img src="https://i.ibb.co/mcK2JMp/3-Button-PINK.png" alt="Icon">
+        </button>
+        <button onclick="chooseVideos(4)">
+            <img src="https://i.ibb.co/hySG1V7/4-Buttonpng-PINK.png" alt="Icon">
+        </button>
+        <button onclick="chooseVideos(5)">
+            <img src="https://i.ibb.co/v3L7q0Z/5-Button-PINK.png" alt="Icon">
+        </button>
+        <button id="swapModeBtn" onclick="toggleSwapMode()" style="display: none;">Swap Mode</button>
+    </div>
+    <div class="local-grid-parent" id="local-videoGrid"></div>
+    <div class="local-layout-menu-overlay" style="display: none;"></div>
+    <div class="startingTuto">
+        <div class="tutoCloseIcon">
+            <i class="fas fa-times"></i>
+        </div>
+
+        <img src="Logo.webp" alt="Logo">
+
+        <div class="link-icon">
+            Tutorial: <a href="https://youtu.be/olUzdV3ZZZA" target="_blank">Youtube Video</a>
+        </div>
+
+
+        <div class="link-icon">
+            <p>Join our community for future updates and report the bugs here:</p><a class="tutoDiscordLogo" href="https://discord.gg/k5vyU3dBggg" target="_blank"><i class="fab fa-discord"></i></a>
+        </div>
+
+        <div class="linkIconSupportedSites">
+            <h2>Supported Sites: </h2>
+            <p>YouTube, Twitch, Internet Archive, PornHub, Hypnotube, Spankbang, Redgifs, PmvHaven and More to come.</p>
+        </div>
+
+        <div class="tutoTips">
+            <p>Deleting CanvasICraft data from your browser will also result in the loss of the playlists you have created.</p>
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.6.1/cropper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.5/croppie.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/muuri@0.9.5/dist/muuri.min.js"></script>
+    <script src="https://unpkg.com/dropzone@6.0.0-beta.1/dist/dropzone-min.js"></script>
+    <script src="scriptIndex.js"></script>
+
+</body>
+</html>
