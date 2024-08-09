@@ -6,7 +6,6 @@
  * Licensed under the CanvasIcraft Proprietary License.
  * You may obtain a copy of the License by contacting CanvasIcraft.
  * V4
- *Testing
  ******************************************************************************************/
 
 
